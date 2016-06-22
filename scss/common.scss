@@ -1,0 +1,9 @@
+@import "base.scss";
+
+.wrapper{
+	@include alt;
+	.ball_box{
+		@include alt;
+		canvas{width: 100%;height:100%;}
+	}
+}
