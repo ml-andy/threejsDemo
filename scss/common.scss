@@ -1,9 +1,35 @@
 @import "base.scss";
 
 .wrapper{
-	@include alt;
+	@include alt(640px,960px,50%,0,-320px);
+	z-index: 1;
+	.info{
+		@include alt(500px,50px);
+		z-index: 9;
+		.lr{
+			@include alt(100%,25px);
+			@include font(18px,25px,#000);
+		}
+		.fb{
+			@include alt(100%,25px,0,25px);
+			@include font(18px,25px,#000);
+		}
+	}
 	.ball_box{
 		@include alt;
-		canvas{width: 100%;height:100%;}
+		z-index: 1;
+		#ball_boxup{
+			@include alt;
+			z-index: 0;
+		}
+		#ball_boxin{
+			@include alt;
+			z-index: 1;
+			background: none;
+		}
 	}
+}
+.cover{
+	@include alt;
+	z-index: 0;
 }
